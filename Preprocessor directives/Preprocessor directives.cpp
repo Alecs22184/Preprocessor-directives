@@ -7,12 +7,11 @@
 
 
 #define MODE 1
+#if   MODE ==1
+#define  ADD(a,b) ((a)+(b))
+#endif
 
 
-
-int ADD(int a, int b) {
-    return (a + b);
-}
 
 int main()
 
@@ -27,12 +26,13 @@ int main()
 
 
 #if   MODE ==1
+
     std::cout << "Работаю в боевом режиме" << std::endl;
     std::cout << "Введите число 1:";
     std::cin >> a;
     std::cout << "Введите число 2:";
     std::cin >> b;
-    std::cout << "Результат сложения:" << ADD(a, b) << std::endl;
+    std::cout << "Результат сложения:" << ADD(a,b) << std::endl;
 #elif   MODE ==0
     std::cout << "Работаю в режиме тренировки" << std::endl;
 #else 
